@@ -1,0 +1,11 @@
+
+
+<div class="slider" >
+      <h1 class="name">{{name}}</h1>
+      <button (click)="previus()" id="btn1"><i class="fas fa-arrow-left"></i></button>
+      <button (click)="next()" id="btn"><i class="fas fa-arrow-right"></i></button>
+      <div class="slides" [ngStyle]="setMyStyles()" id="slider" *ngIf="router.url==='/'"></div>
+                                             
+<div class="vise">{{vise}}</div>
+<div class="random-img"><img [src]="img"></div>
+</div>

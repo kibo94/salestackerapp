@@ -1,0 +1,130 @@
+
+  
+        
+   <div class="modal" *ngIf="show">Dodato u kantu</div>
+        <div class="item-wraper">
+            <div class="item-inner">
+                <div class="item">
+
+                    <p class="item-name">{{item.name |uppercase}}</p>
+  
+                    <div class="image" ><img *ngIf="item.bck" src="{{item.bck}}" class="cart-img"></div>
+                  
+                 
+                </div>
+
+
+<div class="item cart">
+    <p class="price">Price: {{item.price}} RSD</p>
+    <button (click)="singleItem(item)" class="btn"  ><span  class="cart-icon"><i class="fas fa-shopping-cart"></i></span>addToCart</button>
+    
+
+</div>
+
+
+
+            </div>
+         
+        </div>
+
+
+           
+  <table >
+
+    <tr>
+        <td>
+                {{products[0]}}
+        </td>
+           
+         <td>
+                {{vrednosti[0]}}
+         </td>  
+    
+         
+        </tr>
+        
+    <tr>
+
+        <td>
+                {{products[1]}}
+        </td>
+           
+            <td>
+                    {{vrednosti[1]}}
+             </td>  
+           
+     
+         
+        </tr>
+   
+        
+    <tr>
+        <td>
+                {{products[2]}}
+        </td>
+           
+            <td>
+                    {{vrednosti[2]}}
+             </td>  
+     
+         
+        </tr>
+         <tr>
+        <td>
+                {{products[3]}}
+        </td>
+           
+            <td>
+                    {{vrednosti[3]}}
+             </td>  
+     
+         
+        </tr>
+         <tr>
+        <td>
+                {{products[4]}}
+        </td>
+           
+            <td>
+                    {{vrednosti[4]}}
+             </td>  
+     
+         
+        </tr>
+         <tr>
+        <td>
+                {{products[5]}}
+        </td>
+           
+            <td>
+                    {{vrednosti[5]}}
+             </td>  
+     
+         
+        </tr>
+         <tr>
+        <td>
+                {{products[6]}}
+        </td>
+           
+            <td>
+                    {{vrednosti[6]}}
+             </td>  
+     
+         
+        </tr>
+   
+   
+        
+  </table>
+             
+              
+  
+  
+        
+     
+
+
+  
+
+

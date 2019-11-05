@@ -1,0 +1,72 @@
+.carts{
+	display: flex;
+
+
+	margin: 1rem auto;
+	justify-content: center;
+	align-items: center;
+	border: 2px solid lightgrey;
+	padding: 0 1rem;
+}
+.btn{
+	padding: 0.4rem 2rem;
+	outline: none;
+	border: none;
+	width: 70%;
+
+}
+.price{
+	font-size: 2rem;
+	font-weight: bold;
+	text-align: center;
+}
+.item-name{
+	font-size: 1.3rem;
+	color: grey;
+	text-align: center;
+}
+.total{
+	font-size: 2rem;
+	font-weight: bold;
+}
+.emty{
+	font-size:2rem;
+	font-weight: bold;
+	text-align: center;
+}
+.item{
+	width: 20%;
+	text-align: center;
+}
+.finish{
+	text-align: center;
+}
+.finish button{
+	width: 30%;
+	margin: 1rem 0;
+}
+
+@media screen and (max-width: 780px) {
+
+.carts{
+	flex-direction: column;
+	padding: 1rem 0;
+}
+.btn{
+	width: 50%
+}
+.item{
+	width: 100%;
+}
+}
+.modal{
+	position: fixed;
+	text-align: center;
+	padding: 0.3rem 0;
+	color: green;
+	width: 30%;
+	top:70px;
+	background:wheat;
+left: 35%;
+	
+}

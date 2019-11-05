@@ -1,0 +1,179 @@
+nav{
+    height: 60px;
+    background: black;
+
+
+}
+#responsive-nav{
+    position: absolute;
+
+    left:-60%;
+}
+ul{
+    display: flex;
+    list-style: none;
+}
+ul li {
+
+line-height: 60px;
+color: white;
+padding: 0 0.5rem;
+
+}
+ul li a{
+    color: white;
+
+    text-transform: uppercase;
+    
+    text-decoration: none;
+}
+
+
+ul li a:hover{
+    color: gray;
+}
+/* cart */
+.carts{
+
+    text-align: center;
+  
+    font-family: fantasy;
+    padding: 0 2rem;
+    margin: 1rem auto;
+
+}
+.cart{
+    text-align: center;
+    width: 300px;
+    height: 300px;
+
+    margin: 0 auto;
+    position: absolute;
+    right: 0%;
+    top:180px;
+    z-index: 9999;
+    background: gray;
+    overflow-y:scroll;
+    padding: 1rem;
+}
+
+.close{
+    position: relative;
+    left: 100px;
+}
+ul {
+    display: flex;
+    list-style:none;
+}
+ul li{
+    padding: 0 0.2rem;
+}
+.cart-img{
+    width: 100%;
+    height: 100%;
+}
+
+.item-name{
+    padding: 0.35rem;
+    width: 100%;
+    text-align: center;
+}
+.btn{
+    padding: 0.3rem;
+    outline: none;
+    border: none;
+    margin: 0.35rem;
+}
+.price{
+    margin: 0.35rem;
+}
+.burger{
+    display: none;
+}
+.icon-cart{
+    padding-right: 5px;
+}
+
+@media screen and (max-width:750px){
+
+    .nav-ul li:not(.burger){
+        display: none;
+    }
+    .cart1{
+        display: block;
+    }
+
+.burger{
+    display: block;
+}
+
+#responsive-nav{
+    background: black;
+  
+    z-index: 9999;
+    width: 60%;
+
+ 
+
+    
+ 
+    /* margin: 1rem; */
+}
+
+.animate-nav{
+  position: absolute;
+  left: -60%;
+    animation-name: nav;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+.animate-nav1{
+    position: absolute;
+    left: 60%;
+      animation-name: nav1;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+  }
+
+
+  .wid{
+      width:0px;
+  }
+@keyframes nav {
+
+from{left: -60%;}
+to{left: 0%;}    
+}
+@keyframes nav1 {
+
+    from{left: 0%;}
+    to{left: -60%;}    
+    }
+
+.responsive-ul{
+    flex-direction: column;
+    list-style: none;
+
+}
+.responsive-ul li{
+    color: white;
+}
+
+
+}
+@media screen and (max-width:490px){
+    .nav-ul li:not(.burger,.cart1){
+        display: none;
+    }
+    .cart1{
+ 
+      
+        /* position: absolute;
+        right: 0%; */
+    }
+
+    .burger{
+        display: block;
+    }
+   
+}

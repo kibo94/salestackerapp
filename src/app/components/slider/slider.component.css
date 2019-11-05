@@ -1,0 +1,148 @@
+
+
+.slider{
+    height: 280px;
+  
+    position: relative;
+    width: 100%;
+   
+}
+
+
+
+
+.slides{
+position: relative;
+left: 0;
+top: 0;
+height: 100%;
+width: 100%;
+
+
+
+
+}
+
+
+
+.animate{
+    
+
+
+    animation-name: slider;
+    animation-duration: 0.7s;
+    opacity: 1;
+    
+
+}
+
+@keyframes slider{
+    from { opacity: 0}
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+#btn{
+    position: absolute;
+    z-index: 9000;
+    right: 5%;
+    top: 50%;
+  
+}
+#btn1{
+    position: absolute;
+    z-index: 999;
+    left: 5%;
+    top:50%;
+
+}
+button i{
+    font-size: 30px;
+}
+
+
+
+button{
+    transform: translate(-50%,-50%);
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.vise{
+    position: absolute;
+    bottom: 20px;
+    left: 7rem;
+    background: yellow;
+    height:30px;
+    line-height: 30px;
+    border-radius: 7px;
+    z-index: 3;
+
+}
+.random-img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 150px;
+    width: 250px;
+}
+
+.random-img img{
+    height: 100%;
+    width: 100%;
+}
+
+.name{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    left: 0;
+    top: 0.3rem;
+
+    z-index: 3;
+
+
+
+}
+
+@media screen and (max-width:790px){
+    .slider{
+        height: 300px;
+    }
+
+}
+
+@media screen and (max-width:490px){
+    .slider{
+        height: 200px;
+    }
+    button i{
+        font-size: 20px;
+    }
+    .vise{
+        left: 0.3rem;
+        bottom: 0.5rem;
+    }
+ .random-img{
+     top: 60%;
+     height: 130px;
+     width: 150px;
+ }
+    .random-img img{
+       
+        height: 80%;
+        width: 100%
+        
+    }
+    .name{
+        font-size: 25px;
+    }
+    
+}

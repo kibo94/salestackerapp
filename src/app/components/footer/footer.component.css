@@ -1,0 +1,169 @@
+/* Footer */
+.row{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+ 
+    
+    
+}
+
+.row-items{
+    height: 40%;
+}
+
+.col
+{
+    display: flex;
+    height: 100%;
+  align-items: center;
+
+ 
+    
+}
+.col-items{
+width: 33%;
+height: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-start;
+
+
+}
+
+
+.col-lica{
+    border-right: 2px solid white;
+    
+}
+
+.lica,.col-pozivi{
+    margin: 1rem;
+}
+
+.col-news{
+    border-right: 2px solid white;
+}
+
+.fizicka{
+    width: 60%;
+}
+
+footer{
+    height: 300px;
+    background:#2f343d;
+
+}
+
+
+.footer-para{
+    font-size: 14px;
+    color: black;
+    margin: 0.5rem;
+}
+.footer-h{
+    font-size: 20px;
+    color: grey;
+    margin:0.5rem;
+}
+
+.prijava-p{
+    margin: 1rem;
+    font-size: 23px;
+    color:grey;
+}
+
+.input{
+    padding: 0.7rem 1rem;
+    background: #23272e;
+    border: none;
+    outline: none;
+}
+
+
+
+
+.button{
+    
+        padding: 0.7rem 1rem;
+       background: white;
+        border: none;
+        outline: none;
+    
+}
+
+.button:hover{
+    background: rgb(206, 203, 10);
+}
+
+
+
+.footer-ul{
+    list-style: none;
+}
+
+
+
+.phone-h{
+    font-size: 25px;
+}
+
+
+
+
+
+
+@media screen and (max-width:768px){
+
+  
+
+
+
+    .phone-h{
+        text-align: center;
+        padding: 0.6rem 0;
+        ;
+    }
+    .phone-h span i{
+        color: green;
+        margin: 0 0.5rem;
+    }
+    
+    footer{
+        height: auto;
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .col-items{
+        width: 50%;
+        text-align: center;
+        margin: 0.5rem;
+        padding-bottom: 1rem;
+    }
+    .col{
+        flex-direction: column;
+    }
+    
+    
+    
+    .col-lica,.col-news{
+     border: none;
+     border-bottom: 2px solid white;
+     width: 90%;
+    }
+    
+    .col-pozivi,.licaa{
+        margin: 0rem;
+    }
+  
+    
+    
+    
+    
+    
+    }
+
+
+

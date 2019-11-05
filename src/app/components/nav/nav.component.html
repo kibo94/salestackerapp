@@ -1,0 +1,52 @@
+<nav (dragover)="drag()">
+
+  <ul class="nav-ul">
+        <li (click)="hideCart()" ><a href="#" routerLink="/" *ngIf="router.url !== '/'"><i class="fas fa-home" style="padding:0 0.3rem" ></i> Pocetna strana</a></li>
+      <li  (click)="hide()"><a href="#" routerLink="/televizori"><i class="fas fa-tv" style="padding:0 0.3rem"  ></i> Televizori</a></li>
+      <li  (click)="hide()"><a href="#" routerLink="/mobilni"><i class="fas fa-mobile-alt" style="padding:0 0.3rem"  ></i>Mobilni </a></li>
+      <li  (click)="hide()" ><a href="#" routerLink="/laptopovi"><i class="fas fa-laptop" style="padding:0 0.3rem"  ></i>Laptopovi </a></li>
+     
+      <li><span><i class="fa fa-shopping-cart icon-cart"   (mouseenter)="show()" routerLink="/cart" (click)="hide()" ></i></span>Total {{toTal }} RSD ({{(number)}})</li>
+      <li (click)="toogleMenu()" class="burger"><span><i class="fas fa-bars"></i> </span></li>
+      
+
+  </ul>
+
+</nav>
+<div  id="responsive-nav"> 
+<ul class="responsive-ul" >
+<li (click)="hideCart()" ><a href="#" routerLink="/" *ngIf="router.url !== '/'"><i class="fas fa-home" style="padding:0 0.3rem"></i> Pocetna strana</a></li>
+<li  (click)="hideCart()"><a href="#" routerLink="/televizori"><i class="fas fa-tv" style="padding:0 0.3rem"></i> Televizori</a></li>
+<li  (click)="hideCart()"><a href="#" routerLink="/mobilni"><i class="fas fa-mobile-alt" style="padding:0 0.3rem"></i>Mobilni </a></li>
+<li  (click)="hideCart()"><a href="#" routerLink="/laptopovi"><i class="fas fa-laptop" style="padding:0 0.3rem"></i>Laptopovi </a></li>
+<li><span><i class="fa fa-shopping-cart"   (click)="show()" (mouseleave)="hide()" (click)="hideCart()"routerLink="/cart" (click)="hide()"></i>Total{{toTal}}RSD({{(number)}})</span></li>
+</ul>
+</div>
+
+
+<div class="cart" [hidden]="toogle">
+  <span class="close" (click)="hide()" >X</span>
+      <p  style="text-align: center;" *ngIf="cartitem.length!==0">  Total {{toTal}} RSD ({{number}})</p>
+
+    
+
+      
+      <div class="carts zero" *ngFor="let cartite of cartitem">
+          
+        <div *ngIf="cartitem.length>0">
+ 
+
+             <p class="item-name">Name: {{cartite.name |uppercase}}</p>
+
+            <div class="color" ><img [src]="cartite.bck" class="cart-img"></div>
+            <p class="price">Price: {{cartite.price | currency:USD}}</p> 
+            
+             <button (click)="deleteFromCart(cartite)" class="btn" style="background:red">Izbaci iz kante</button>
+        </div>
+
+      
+   
+</div>
+<p *ngIf="cartitem.length===0">Emty Cart</p>
+</div>
+

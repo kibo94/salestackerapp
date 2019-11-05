@@ -1,0 +1,22 @@
+
+ <div class="loader" *ngIf="loading">Loading...</div>
+<div class="home-items">
+
+    <div class="items" *ngFor="let item of items">
+     <div class="wraper">
+           
+                       <p class="item-p">{{item.name |uppercase}}</p>
+   
+                       <div [class]="item.class" ><img [src]="item.bck" width="100%" height="100%"></div>
+   
+                       <p class="item-p price">Cena:{{item.price}} RSD</p>
+   
+                       <button class="btn detail"style="background:orange" (click)="Details(item)" [routerLink]="['/item', item.rout,item.name,'']"><span class="details-icon"><i class="fas fa-pencil-alt"></i></span>Detalji</button>
+                     
+                       <button (click)="addToCart(item)" class="btn" [id]="item.id" ><span  class="cart-icon"><i class="fas fa-shopping-cart"></i></span>Dodaj u kantu</button>
+           
+   </div>        
+   </div>
+   </div>
+
+   <div class="modal" *ngIf="show">Dodato u kantu</div>

@@ -1,0 +1,34 @@
+<div class="cart" [hidden]="toogle">
+ 
+
+      
+      <div  *ngFor="let cartite of cartitem">
+          
+        <div *ngIf="cartitem.length>0" class="carts">
+       <div class="color item" ><img [src]="cartite.bck" class="cart-img"></div>
+
+             <p class="item-name item">{{cartite.name |uppercase}}</p>
+
+            
+           
+          <!--   <input type="number" #x (click)="get(x)"> -->
+             
+              <p class="price item">Price:{{cartite.price}} RSD</p>
+              <div class="item">
+              	 <button (click)="deleteFromCart(cartite)" class="btn" style="background:red" routerLink="/cart">Izbaci iz kante</button>
+              </div>
+             
+        </div>
+   
+</div>
+    
+<p style="text-align: center;" class="total" *ngIf="cartitem.length>0">Total:{{toTal}} RSD ({{number}})</p>
+<div class="finish">
+      <button class="btn btn-primary" *ngIf="cartitem.length>0" (click)="finish()">Zavrsi kupovinu</button>
+</div>
+
+
+<p *ngIf="cartitem.length===0" class="emty">Emty Cart</p>
+</div>
+
+<div class="modal" *ngIf="modal" >Uspesno izvrsena kupovina</div>
