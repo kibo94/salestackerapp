@@ -24,11 +24,11 @@ public cartService:CartService
   ngOnInit() {
       // get all items
  
-      axios.get("https://burger-builder-1232d.firebaseio.com/mobilni.json")
+      axios.get("https://angular-e-commerce-c5cf8.firebaseio.com/mobiles.json")
       .then(data=> {
         this.items=data.data
      this.loading=false
-        this.mobileService.getMobVal(this.items)
+     
   
       })
 
@@ -66,7 +66,7 @@ this.cartService.Modal.subscribe(modal=>{
  Details(item){
     this.cartService.Details(item)
     this.mobileService.getMob()
-    this.mobileService.getMobVal(item)
+  
     
     
  

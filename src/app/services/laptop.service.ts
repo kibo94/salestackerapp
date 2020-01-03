@@ -23,6 +23,9 @@ getLap(){
 this.lapItem.next(this.speclap)
 }
 
+getLapVal(){
+  
+}
 
 getRout(){
  for(var i=0;i<this.items.length;i++){

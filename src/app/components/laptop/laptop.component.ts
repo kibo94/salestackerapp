@@ -23,11 +23,11 @@ export class LaptopComponent implements OnInit {
   ngOnInit() {
  
 
-    axios.get("https://burger-builder-1232d.firebaseio.com/laptopovi.json")
+    axios.get("https://angular-e-commerce-c5cf8.firebaseio.com/laptops.json")
     .then(data=> {
       this.items=data.data
       this.loading=false
-      this.lapService.getLapVal(this.items)
+    
 
     })
 
@@ -59,8 +59,7 @@ export class LaptopComponent implements OnInit {
     
    this.lapService.getLap()
 
-   this.lapService.getLapVal(item)
-    
+  
  
   
   }
